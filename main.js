@@ -7,7 +7,6 @@ let MisNotas =[
 	cuerpo: 'usar snippets para toasdasdasdasdadsdo3'},
 	{titulo: 'truco de VSCode4',
 	cuerpo: 'usar snippets para todo4'},
-
 ]
 
 //cj_act_04
@@ -17,7 +16,7 @@ const crearNota = function(lasNotas, titulo, cuerpo){
 }
 const borrarNota = function(lasNotas,titulo){
 	index = lasNotas.findIndex(elem => elem.titulo === titulo)
-	if(index >= 0) lasNotas.splice(index,1)
+	if(index >= 0) return lasNotas.splice(index,1)
 }
 
 const ordenarNotasCompletado = function(lasNotas,option){
@@ -41,9 +40,7 @@ crearNota(MisNotas,'haha','hehe')
 console.log('\n-----------------------\n')
 console.log(MisNotas)
 console.log('\n-----------------------\n')
-borrarNota(MisNotas,'truco de VSCode')
-console.log(MisNotas)
-console.log('\n-----------------------\n')
+console.log(borrarNota(MisNotas,'truco de VSCode'))
 console.log(MisNotas)
 console.log('\n-----------------------\n')
 console.log(ordenarNotasCompletado(MisNotas,'cuerpo'))
