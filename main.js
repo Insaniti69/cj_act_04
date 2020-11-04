@@ -17,7 +17,7 @@ const crearNota = function(lasNotas, titulo, cuerpo){
 }
 const borrarNota = function(lasNotas,titulo){
 	index = lasNotas.findIndex(elem => elem.titulo === titulo)
-	if(index >= 0) lasNotas.pop(index)
+	if(index >= 0) lasNotas.splice(index,1)
 }
 
 const ordenarNotasCompletado = function(lasNotas,option){
@@ -41,7 +41,9 @@ crearNota(MisNotas,'haha','hehe')
 console.log('\n-----------------------\n')
 console.log(MisNotas)
 console.log('\n-----------------------\n')
-borrarNota(MisNotas,'haha')
+borrarNota(MisNotas,'truco de VSCode')
+console.log(MisNotas)
+console.log('\n-----------------------\n')
 console.log(MisNotas)
 console.log('\n-----------------------\n')
 console.log(ordenarNotasCompletado(MisNotas,'cuerpo'))
