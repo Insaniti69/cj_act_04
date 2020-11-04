@@ -11,15 +11,14 @@ let MisNotas =[
 
 //cj_act_04
 
-const crearNota = function(lasNotas, titulo, cuerpo){
-	lasNotas.push({titulo:titulo,cuerpo:cuerpo})
-}
-const borrarNota = function(lasNotas,titulo){
+const crearNota = (lasNotas, titulo, cuerpo) => lasNotas.push({titulo:titulo,cuerpo:cuerpo})
+
+const borrarNota = (lasNotas,titulo) => {
 	index = lasNotas.findIndex(elem => elem.titulo === titulo)
 	if(index >= 0) return lasNotas.splice(index,1)
 }
 
-const ordenarNotasCompletado = function(lasNotas,option){
+const ordenarNotasCompletado = (lasNotas,option) => {
 	return lasNotas.sort((a,b) => {
 		if(a[option].toLowerCase() < b[option].toLowerCase()){
 			return -1;
@@ -31,7 +30,7 @@ const ordenarNotasCompletado = function(lasNotas,option){
 	});
 }
 
-const buscarTextoEnNotas = function(lasNotas,texto){
+const buscarTextoEnNotas = (lasNotas,texto) => {
 	index = lasNotas.findIndex(elem => elem.titulo === texto || elem.cuerpo === texto)
 	if(index >= 0) return lasNotas[index]
 }
