@@ -16,7 +16,8 @@ const crearNota = function(lasNotas, titulo, cuerpo){
 	lasNotas.push({titulo:titulo,cuerpo:cuerpo})
 }
 const borrarNota = function(lasNotas,titulo){
-	return lasNotas.findIndex(elem => elem.titulo === titulo)
+	index = lasNotas.findIndex(elem => elem.titulo === titulo)
+	if(index >= 0) lasNotas.pop(index)
 }
 
 const ordenarNotasCompletado = function(lasNotas,option){
@@ -30,13 +31,19 @@ const ordenarNotasCompletado = function(lasNotas,option){
 		}
 	});
 }
+
 const buscarTextoEnNotas = function(lasNotas,texto){
 	index = lasNotas.findIndex(elem => elem.titulo === texto || elem.cuerpo === texto)
 	if(index >= 0) return lasNotas[index]
 }
+
 crearNota(MisNotas,'haha','hehe')
+console.log('\n-----------------------\n')
 console.log(MisNotas)
-MisNotas.pop(borrarNota(MisNotas,'haha'))
+console.log('\n-----------------------\n')
+borrarNota(MisNotas,'haha')
 console.log(MisNotas)
+console.log('\n-----------------------\n')
 console.log(ordenarNotasCompletado(MisNotas,'cuerpo'))
-console.log(buscarTextoEnNotas(MisNotas,'truco de VSC'))
+console.log('\n-----------------------\n')
+console.log(buscarTextoEnNotas(MisNotas,'truco de VSCode2'))
