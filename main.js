@@ -1,4 +1,4 @@
-let MisNotas =[
+const MisNotas =[
     {titulo: 'truco de VSCode',
 	cuerpo: 'usar snippets para todo'},
 	{titulo: 'truco de VSCode2',
