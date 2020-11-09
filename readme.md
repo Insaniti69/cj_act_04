@@ -2,5 +2,5 @@
 Actividad 4
 	Test <br />
 ## Titulo 2
-	test <br />
+	test
 [git pages link](https://github.com/Insaniti69/cj_act_04)
